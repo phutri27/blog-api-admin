@@ -1,4 +1,3 @@
-import Signup from './components/Signup'
 import ErrorPage  from "./components/Error/ServerError"
 import Home from './components/Home'
 import SpecificPost from "./components/SpecificPost"
@@ -12,10 +11,6 @@ const routes = [
     {
         path: "/",
         element: <PublicRoute component={App} />,
-    },
-    {
-        path: "signup",
-        element: <PublicRoute component={Signup} />
     },
     {
         path: "/errorpage",

@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router";
 import { NavBar, Dashboard } from "./components/Background/Background";
-import { Link } from "react-router";
 
 const API_URL = import.meta.env.VITE_API_URL
 
@@ -69,8 +68,6 @@ export default function App(){
 
                     <button className="group login-btn" type="submit"><span className="hover-text">Login</span></button>
                 </form>
-                <div className="flex justify-center">
-                    <p>Dont have an account? <Link className="text-sky-500 hover:underline" to="/signup">Click here </Link>to signup</p></div>
             </Dashboard>
         </>
     )
