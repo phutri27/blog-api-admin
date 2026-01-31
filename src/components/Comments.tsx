@@ -86,8 +86,6 @@ function Comment({setComments, comment}: CommentType) {
     const [isEdit, setEdit] = useState<boolean>(false)
     const [error, setError] = useState<string>('')
 
-    const user = localStorage.getItem("userId")
-    const onComment = Number(user) == comment.user.id
     const date = format(comment.date, "kk:mm dd/M")
 
     // isEdit state flag
@@ -188,11 +186,10 @@ function Comment({setComments, comment}: CommentType) {
                     {comment.text}
                 </div>
             </div>
-            {onComment && 
             <div className="flex gap-2 shrink-0">
                 <Pencil className="icon-btn" onClick={handleEdit} size={15} />
                 <Delete className="icon-btn" onClick={handleDelete} size={15} />
-            </div>}
+            </div>
         </div>
     )
 }

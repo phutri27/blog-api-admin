@@ -39,7 +39,6 @@ export default function App(){
             passwordRef.current.value = ""
         }
         setError(null)
-        localStorage.setItem("userId", result.userId)
         localStorage.setItem("token", result.token)
         return navigate("/home")
     }
