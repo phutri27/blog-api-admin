@@ -21,8 +21,7 @@ export default function App(){
             headers: {"Content-Type" : "application/json"},
             body: JSON.stringify(payload)
         })
-
-        console.log(response)
+        
         const result = await response.json()
         if (response.status >= 400){
             if (result.message) {

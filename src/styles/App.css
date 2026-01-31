@@ -7,27 +7,25 @@
     --font-inter: "Inter", sans-serrif;
 }
 
-@layer components{
-    .input-login,
-    .input-signup{
-        @apply border text-2xl rounded-xl px-6 py-3 focus:outline-slate-400
-    }
-    .form-container{
-        @apply flex flex-col items-center justify-center gap-5 bg-zinc-200 rounded-lg shadow-xl py-10; 
-    }
+.input-login,
+.input-signup{
+    @apply border text-2xl rounded-xl px-6 py-3 focus:outline-slate-400
 }
 
+.form-container{
+    @apply flex flex-col items-center justify-center gap-5 bg-zinc-200 rounded-lg shadow-xl py-10; 
+}
 
-@layer components{
-    .signup-btn,
-    .login-btn{
-        @apply button-default-color text-white px-5 py-2 rounded-3xl font-semibold cursor-pointer hover:bg-slate-600
-    }
-    .hover-text{
-        @apply inline-block transition-transform duration-300 group-hover:-translate-y-1
-    }
+.signup-btn,
+.login-btn{
+    @apply button-default-color text-white px-5 py-2 rounded-3xl font-semibold cursor-pointer hover:bg-slate-600
+}
+
+.hover-text{
+    @apply inline-block transition-transform duration-300 group-hover:-translate-y-1
+}
     
-}
+
 
 @layer components{
     .icon-btn{
@@ -60,4 +58,13 @@
     color: var(--color-gray-600)
 }
 
-
+@keyframes slide-in-down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1
+  }
+}

@@ -6,6 +6,7 @@ import { HomeError } from "./components/Error/HomeError"
 import PrivateRoute from "./components/SpecificRoute/PrivateRoute"
 import PublicRoute from "./components/SpecificRoute/PublicRoute"
 import Profile from "./components/Profile"
+import PusblishPost from "./components/PublishPost"
 import App from './App'
 const routes = [
     {
@@ -31,6 +32,10 @@ const routes = [
     {
         path: "profile",
         element: <PrivateRoute component={Profile} />
+    },
+    {
+        path: "new_post",
+        element: <PrivateRoute component={PusblishPost} />
     }
 ]
 
