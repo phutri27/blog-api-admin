@@ -25,7 +25,13 @@
     @apply inline-block transition-transform duration-300 group-hover:-translate-y-1
 }
     
+.label-edit-style{
+    @apply flex flex-col text-xl md:text-2xl font-inter text-slate-800 tracking-wide font-bold
+}
 
+.text-edit-style{
+    @apply field-sizing-content focus:outline-sky-400 bg-gray-200 border-2 rounded-sm text-xs
+}
 
 @layer components{
     .icon-btn{

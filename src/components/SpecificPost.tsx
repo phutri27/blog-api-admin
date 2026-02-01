@@ -1,7 +1,7 @@
 import Posts from "./Posts";
 import Comments from "./Comments";
 import { useLoaderData, useParams } from "react-router";
-import type { PostProperty } from "../App";
+import type { PostProperty } from "./Home";
 import Header from "./Header";
 import { NavBar, Dashboard } from "./Background/Background";
 

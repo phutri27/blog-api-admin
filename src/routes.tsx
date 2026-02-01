@@ -5,9 +5,10 @@ import { Loader as postsLoader, ProtectLoader as protectLoader} from "./componen
 import { HomeError } from "./components/Error/HomeError"
 import PrivateRoute from "./components/SpecificRoute/PrivateRoute"
 import PublicRoute from "./components/SpecificRoute/PublicRoute"
-import Profile from "./components/Profile"
+import Profile, {ProfileComments, ProfilePosts} from "./components/Profile"
 import PusblishPost from "./components/PublishPost"
 import App from './App'
+import { Outlet } from "react-router"
 const routes = [
     {
         path: "/",
@@ -31,7 +32,12 @@ const routes = [
     },
     {
         path: "profile",
-        element: <PrivateRoute component={Profile} />
+        element: <PrivateRoute component={Outlet} />,
+        children: [
+            {index: true, element: <Profile />},
+            {path: "comments", element: <ProfileComments />},
+            {path: "posts", element: <ProfilePosts />}
+        ]
     },
     {
         path: "new_post",

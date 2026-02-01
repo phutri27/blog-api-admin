@@ -2,32 +2,17 @@ import { useRef, useState } from "react";
 import Header from "./Header";
 import { Dashboard } from "./Background/Background";
 import { Editor } from '@tinymce/tinymce-react';
-
+import { ErrDisplay } from "./Error/ErrorDisplay";
 const TINY_MCE = import.meta.env.VITE_TINY_MCE
 const API_URL = import.meta.env.VITE_API_URL
 
-type ErrorDisplay = {
-    errors: string[],
-    keyword: string
-}
-
-function ErrDisplay({errors, keyword}: ErrorDisplay) {
-    return (
-        <>
-            {errors.map((err) => 
-                (err.includes(keyword) ? 
-            <div className="text-red-500">{err}</div> : null)
-            )}
-        </>
-    )
-}
 
 function PusblishPost(){
     const [title, setTitle] = useState<string>('')
     const [published, setPublished] = useState<boolean>(true)
     const [errors, setErrors] = useState<string[]>([])
     const [message, setMessage] = useState<string>('')
-    const editorRef = useRef(null);
+    const editorRef = useRef<any>(null);
 
     const handleSubmit = async () => {
         setErrors([])

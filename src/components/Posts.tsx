@@ -1,4 +1,4 @@
-import type { PostProperty } from "../App"
+import type { PostProperty } from "./Home";
 import { format } from "date-fns";
 import { Link } from "react-router"
 import "../styles/App.css"
@@ -16,7 +16,7 @@ export default function Posts({post, type}: PostProp){
         text = textArr.length >= 50 ? textArr.slice(0, 51).join(" ") : textArr.join(" ")
     }
     return(
-        <div className="flex gap-5 md:gap-5 md:w-3/4 ">
+        <div className="flex gap-5 mx-auto md:gap-5 md:w-3/4 ">
             {type !== "specific" ? (
             <>
                 <div className="flex flex-col min-w-1/5 items-center text-md text-slate-800 font-inter font-bold ">

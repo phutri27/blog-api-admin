@@ -11,6 +11,7 @@ export type PostProperty = {
     title: string,
     text: string,
     date: string | Date,
+    published: boolean,
     users: {email: string}
 }
 
